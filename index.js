@@ -11,11 +11,11 @@ document.getElementById("author").textContent = `By: ${data.user.name}`
 //     })
 
 
-const res = await fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+res = await fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
 if (!res.ok) {
     throw Error("Something went wrong")
 }
-const data = await res.json()
+data = await res.json()
 document.getElementById("crypto-top").innerHTML = `
     <img src=${data.image.small} />
     <span>${data.name}</span>
